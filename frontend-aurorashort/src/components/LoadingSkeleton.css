@@ -1,0 +1,79 @@
+.skeleton-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-card {
+  padding: 18px 20px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skeleton-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.skeleton-bar {
+  height: 14px;
+  border-radius: 6px;
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+.skeleton-bar-lg {
+  width: 45%;
+}
+.skeleton-bar-sm {
+  width: 15%;
+}
+.skeleton-bar-md {
+  width: 65%;
+}
+
+.skeleton-chips {
+  display: flex;
+  gap: 8px;
+}
+
+.skeleton-chip {
+  width: 90px;
+  height: 22px;
+  border-radius: var(--radius-pill);
+  background: linear-gradient(
+    100deg,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 70%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .skeleton-bar,
+  .skeleton-chip {
+    animation: none;
+  }
+}

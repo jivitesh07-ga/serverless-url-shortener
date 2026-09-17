@@ -1,0 +1,166 @@
+.result-card {
+  position: relative;
+  padding: 28px;
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  overflow: hidden;
+  animation: result-in 600ms var(--ease-out);
+}
+
+@keyframes result-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.result-glow {
+  position: absolute;
+  inset: -40% -10% auto -10%;
+  height: 220px;
+  background: radial-gradient(closest-side, var(--pink-glow), transparent 75%);
+  filter: blur(30px);
+  opacity: 0.7;
+  pointer-events: none;
+  animation: glow-expand 700ms var(--ease-out);
+}
+
+@keyframes glow-expand {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 0.7;
+    transform: scale(1);
+  }
+}
+
+.result-check {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--success);
+  background: var(--success-bg);
+  margin-bottom: 14px;
+}
+
+.result-title {
+  position: relative;
+  font-size: 19px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.result-url-row {
+  position: relative;
+  margin-bottom: 18px;
+}
+
+.result-url {
+  display: inline-block;
+  font-size: 19px;
+  font-weight: 650;
+  color: var(--pink-soft);
+  text-decoration: none;
+  word-break: break-all;
+  border-bottom: 1px solid var(--pink-glow);
+  padding-bottom: 2px;
+  transition: color var(--dur-fast) var(--ease-out);
+}
+
+.result-url:hover {
+  color: var(--pink);
+}
+
+.result-actions {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.result-meta {
+  position: relative;
+  border-top: 1px solid var(--border);
+  padding-top: 16px;
+}
+
+.result-original {
+  font-size: 13px;
+  color: var(--text-secondary);
+  word-break: break-all;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.result-original span {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.result-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: var(--radius-pill);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text-secondary);
+}
+
+.chip-security {
+  color: var(--success);
+  border-color: rgba(111, 227, 168, 0.28);
+  background: var(--success-bg);
+}
+
+.chip-expiration-active,
+.chip-expiration-never {
+  color: var(--text-secondary);
+}
+
+.chip-expiration-soon {
+  color: var(--warning);
+  border-color: rgba(255, 195, 111, 0.28);
+  background: var(--warning-bg);
+}
+
+.chip-expiration-expired {
+  color: var(--danger);
+  border-color: rgba(255, 111, 143, 0.28);
+  background: var(--danger-bg);
+}
+
+@media (max-width: 480px) {
+  .result-card {
+    padding: 20px;
+  }
+  .result-url {
+    font-size: 16px;
+  }
+}

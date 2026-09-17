@@ -1,0 +1,102 @@
+.security-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 4px 2px;
+}
+
+.security-checking {
+  color: var(--text-secondary);
+}
+
+.security-passed {
+  color: var(--success);
+  animation: pop-in 400ms var(--ease-out);
+}
+
+@keyframes pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.spin {
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.security-panel {
+  display: flex;
+  gap: 14px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  animation: pop-in 400ms var(--ease-out);
+}
+
+.security-panel-icon {
+  flex-shrink: 0;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.security-panel-threat {
+  background: var(--warning-bg);
+  border: 1px solid rgba(255, 195, 111, 0.3);
+}
+.security-panel-threat .security-panel-icon {
+  color: var(--warning);
+  background: rgba(255, 195, 111, 0.16);
+}
+
+.security-panel-unavailable {
+  background: var(--info-bg);
+  border: 1px solid rgba(130, 183, 255, 0.28);
+}
+.security-panel-unavailable .security-panel-icon {
+  color: var(--info);
+  background: rgba(130, 183, 255, 0.16);
+}
+
+.security-panel-body h3 {
+  font-size: 14.5px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.security-panel-body p {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.security-panel-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}

@@ -1,0 +1,55 @@
+.expiration-field {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.field-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.expiration-segments {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.expiration-segment {
+  height: 42px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-secondary);
+  font-size: 13.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    border-color var(--dur-fast) var(--ease-out),
+    color var(--dur-fast) var(--ease-out),
+    background var(--dur-fast) var(--ease-out),
+    box-shadow var(--dur-fast) var(--ease-out);
+}
+
+.expiration-segment:hover {
+  border-color: var(--border-strong);
+  color: var(--text-primary);
+}
+
+.expiration-segment.is-selected {
+  color: var(--pink-soft);
+  border-color: var(--pink-glow);
+  background: linear-gradient(160deg, rgba(255, 130, 199, 0.14), rgba(155, 123, 255, 0.08));
+  box-shadow: 0 0 0 1px var(--pink-glow), 0 4px 16px -6px var(--pink-glow);
+}
+
+.custom-date-wrap {
+  margin-top: 2px;
+}
+
+@media (max-width: 480px) {
+  .expiration-segments {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

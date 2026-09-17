@@ -1,0 +1,12 @@
+.creator-section {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 36px 24px 8px;
+  scroll-margin-top: 84px;
+}
+
+@media (max-width: 480px) {
+  .creator-section {
+    padding: 28px 16px 4px;
+  }
+}

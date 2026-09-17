@@ -1,0 +1,18 @@
+.site-footer {
+  margin-top: auto;
+  border-top: 1px solid var(--border);
+  padding: 22px 24px 28px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.site-footer p {
+  font-size: 12.5px;
+  color: var(--text-muted);
+}
+
+.site-footer-stack {
+  letter-spacing: 0.01em;
+}
