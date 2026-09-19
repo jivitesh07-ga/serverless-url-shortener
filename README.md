@@ -233,6 +233,7 @@ Reduced-motion support
 
 # 📁 Project Structure
 
+<pre>
 serverless-url-shortener/
 ├── frontend/
 │   ├── src/
@@ -262,6 +263,7 @@ serverless-url-shortener/
 ├── .env.example
 ├── .gitignore
 └── README.md
+</pre>
 
 
 # ⚙️ Local Development
