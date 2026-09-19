@@ -272,6 +272,12 @@ Build the backend:
 
 npm run build
 
+```bash
+cd my-project
+npm install
+```
+
+
 The Lambda functions can then be bundled and deployed according to the AWS deployment configuration.
 
 🔑 Backend Environment Variables
