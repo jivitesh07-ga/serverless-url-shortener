@@ -1,4 +1,4 @@
-# Serverless URL Shortener on AWS
+# Serverless URL Shortener 
 
 A production-oriented serverless URL shortening platform built with React, TypeScript, AWS Lambda, API Gateway, DynamoDB, S3, and Google Safe Browsing API.
 
@@ -141,6 +141,7 @@ Reduced-motion support
 # 💻 Tech Stack
 Frontend
 •React
+
 •TypeScript
 •Vite
 •js
@@ -220,6 +221,7 @@ AWS Console access
 Clone the repository
 git clone <YOUR-GITHUB-REPOSITORY-URL>
 cd serverless-url-shortener
+
 🎨 Frontend Setup
 ```bash
 cd frontend
@@ -249,6 +251,8 @@ npm run dev
 The application should be available at:
 
 http://localhost:5173
+
+
 🏗️ Production Build
 
 From the frontend directory:
@@ -306,9 +310,14 @@ Do not commit real secrets to GitHub.
 Detailed project documentation is available in:
 
 docs/
+
 ├── architecture.md
+
 ├── database.md
+
 ├── api.md
+
 └── security.md
+
 
 The repository also contains the complete architecture documentation covering the AWS components, request flows, database model, security model, and deployment status.
