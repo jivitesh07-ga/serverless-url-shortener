@@ -221,9 +221,12 @@ Clone the repository
 git clone <YOUR-GITHUB-REPOSITORY-URL>
 cd serverless-url-shortener
 🎨 Frontend Setup
+```bash
 cd frontend
+```
+```bash
 npm install
-
+```
 Create:
 
 .env.local
@@ -239,8 +242,9 @@ VITE_API_BASE_URL=https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com
 Never place AWS credentials or the Google Safe Browsing API key in frontend environment variables.
 
 Start the development server:
-
+```bash
 npm run dev
+```
 
 The application should be available at:
 
@@ -248,35 +252,33 @@ http://localhost:5173
 🏗️ Production Build
 
 From the frontend directory:
-
+```bash
 npm run build
+```
 
 The production files are generated in:
 
 frontend/dist/
 
 To preview the production build locally:
-
+```bash
 npm run preview
+```
 ⚙️ Backend Setup
 
 Navigate to:
-
-cd backend
-
-Install dependencies:
-
-npm install
-
-Build the backend:
-
-npm run build
-
 ```bash
-cd my-project
-npm install
+cd backend
 ```
 
+Install dependencies:
+```bash
+npm install
+```
+Build the backend:
+```bash
+npm run build
+```
 
 The Lambda functions can then be bundled and deployed according to the AWS deployment configuration.
 
