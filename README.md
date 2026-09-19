@@ -1,46 +1,24 @@
 # Serverless URL Shortener 
 
-
-
 A production-oriented serverless URL shortening platform built with React, TypeScript, AWS Lambda, API Gateway, DynamoDB, S3, and Google Safe Browsing API.
-
-
 
 The application allows users to create, manage, and analyze shortened URLs without requiring user accounts or passwords. It also supports custom aliases, URL expiration, click analytics, browser-based ownership, and security checks against known malicious URLs.
 
-
-
 ✨ Features
-
-
 
 🔗 URL Shortening
 
-
-
 Convert long URLs into short URLs
-
-
 
 Automatically generate secure random short codes
 
-
-
 Support custom aliases
-
-
 
 Prevent duplicate short codes and aliases
 
-
-
 ⏳ URL Expiration
 
-
-
 Users can choose:
-
-
 
 1 day
 
@@ -50,19 +28,11 @@ Never
 
 Custom expiration date
 
-
-
 Expired URLs are rejected by the backend with an HTTP 410 Gone response.
-
-
 
 📊 Analytics
 
-
-
 Each shortened URL tracks:
-
-
 
 Total click count
 
@@ -74,19 +44,11 @@ Current URL status
 
 Expiration date
 
-
-
 🛡️ URL Security
-
-
 
 Before a URL is shortened, the backend checks it using the Google Safe Browsing API.
 
-
-
 The application can identify known threat matches such as:
-
-
 
 Malware
 
@@ -96,23 +58,13 @@ Unwanted software
 
 Potentially harmful applications
 
-
-
 If a submitted URL is flagged, the short URL is not created.
-
-
 
 The security check does not guarantee that a URL is completely safe. It indicates whether the configured threat-intelligence service detected a known match.
 
-
-
 🗑️ URL Management
 
-
-
 Users can:
-
-
 
 View their shortened URLs
 
@@ -126,11 +78,7 @@ View analytics
 
 👤 No Login Required
 
-
-
 The V1 application does not require:
-
-
 
 Signup
 
@@ -140,27 +88,15 @@ Passwords
 
 Cognito
 
-
-
 Instead, the browser receives a random ownerToken that is stored in localStorage.
-
-
 
 This token associates URLs with the browser that created them.
 
-
-
 Because this is not full authentication, clearing browser storage or changing devices/browsers can result in losing access to previously created URLs.
-
-
 
 🎨 Modern React UI
 
-
-
 The frontend includes:
-
-
 
 Aurora-inspired pink/black design
 
@@ -183,7 +119,6 @@ Responsive URL management
 Accessibility considerations
 
 Reduced-motion support
-
 
 
 # 🏗️ Architecture
@@ -238,7 +173,7 @@ Reduced-motion support
                      CloudWatch
 # 💻 Tech Stack
 
-#Frontend
+# Frontend
 
 •React
 
@@ -252,7 +187,7 @@ Reduced-motion support
 
 •html
 
-#Backend
+# Backend
 
 •AWS Lambda
 
@@ -262,7 +197,7 @@ Reduced-motion support
 
 •AWS SDK for JavaScript
 
-#Cloud
+# Cloud
 
 •Amazon API Gateway
 
@@ -276,7 +211,7 @@ Reduced-motion support
 
 •AWS CloudWatch
 
-#Security
+# Security
 
 •Google Safe Browsing API
 
@@ -284,7 +219,7 @@ Reduced-motion support
 
 •HTTPS through planned CloudFront deployment
 
-#Development
+# Development
 
 •Git
 
@@ -299,81 +234,43 @@ Reduced-motion support
 # 📁 Project Structure
 
 serverless-url-shortener/
-
 │
-
 ├── frontend/
-
 │   ├── src/
-
 │   ├── public/
-
 │   ├── dist/
-
 │   ├── package.json
-
 │   ├── tsconfig.json
-
 │   └── vite.config.ts
-
 │
-
 ├── backend/
-
 │   ├── src/
-
 │   │   ├── createUrl/
-
 │   │   │   └── handler.ts
-
 │   │   │
-
 │   │   ├── redirectUrl/
-
 │   │   │   └── handler.ts
-
 │   │   │
-
 │   │   ├── manageUrls/
-
 │   │   │   └── handler.ts
-
 │   │   │
-
 │   │   └── shared/
-
 │   │       └── dynamodb.ts
-
 │   │
-
 │   ├── package.json
-
 │   └── tsconfig.json
-
 │
-
 ├── infrastructure/
-
 │
-
 ├── docs/
-
 │   ├── architecture.md
-
 │   ├── database.md
-
 │   ├── api.md
-
 │   └── security.md
-
 │
-
 ├── .env.example
-
 ├── .gitignore
-
 └── README.md
-
 
 
 # ⚙️ Local Development
@@ -381,8 +278,6 @@ serverless-url-shortener/
 Prerequisites
 
 Install:
-
-
 
 Node.js
 
@@ -421,31 +316,17 @@ npm install
 
 Create:
 
-
-
 .env.local
-
-
 
 Add:
 
-
-
 VITE_API_BASE_URL=YOUR_API_GATEWAY_INVOKE_URL
-
-
 
 Example:
 
-
-
 VITE_API_BASE_URL=https://xxxxxxxxxx.execute-api.us-east-1.amazonaws.com
 
-
-
 Never place AWS credentials or the Google Safe Browsing API key in frontend environment variables.
-
-
 
 Start the development server:
 
@@ -455,21 +336,11 @@ npm run dev
 
 ```
 
-
-
 The application should be available at:
-
-
 
 http://localhost:5173
 
-
-
-
-
 🏗️ Production Build
-
-
 
 From the frontend directory:
 
@@ -479,15 +350,9 @@ npm run build
 
 ```
 
-
-
 The production files are generated in:
 
-
-
 frontend/dist/
-
-
 
 To preview the production build locally:
 
@@ -499,8 +364,6 @@ npm run preview
 
 ⚙️ Backend Setup
 
-
-
 Navigate to:
 
 ```bash
@@ -508,8 +371,6 @@ Navigate to:
 cd backend
 
 ```
-
-
 
 Install dependencies:
 
@@ -527,19 +388,11 @@ npm run build
 
 ```
 
-
-
 The Lambda functions can then be bundled and deployed according to the AWS deployment configuration.
-
-
 
 🔑 Backend Environment Variables
 
-
-
 The Lambda functions use environment variables such as:
-
-
 
 TABLE_NAME
 
@@ -547,11 +400,7 @@ SHORT_URL_BASE
 
 SAFE_BROWSING_API_KEY
 
-
-
 Example:
-
-
 
 TABLE_NAME=url-shortener-urls
 
@@ -561,45 +410,23 @@ SAFE_BROWSING_API_KEY=YOUR_SERVER_SIDE_KEY
 
 Important
 
-
-
 The Safe Browsing API key must remain server-side.
-
-
 
 Do not commit real secrets to GitHub.
 
-
-
 # 📄 Documentation
-
-
 
 Detailed project documentation is available in:
 
-
-
 docs/
-
-
 
 ├── architecture.md
 
-
-
 ├── database.md
-
-
 
 ├── api.md
 
-
-
 └── security.md
-
-
-
-
 
 The repository also contains the complete architecture documentation covering the AWS components, request flows, database model, security model, and deployment status.
 
