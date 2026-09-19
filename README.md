@@ -4,7 +4,7 @@ A production-oriented serverless URL shortening platform built with React, TypeS
 
 The application allows users to create, manage, and analyze shortened URLs without requiring user accounts or passwords. It also supports custom aliases, URL expiration, click analytics, browser-based ownership, and security checks against known malicious URLs.
 
-website link - d1w054t0pd0qu2.cloudfront.net
+website link - https://d1w054t0pd0qu2.cloudfront.net/
 
 ✨ Features
 
