@@ -187,118 +187,60 @@ Reduced-motion support
 
 
 # 🏗️ Architecture
-
-
-
                          INTERNET
-
                             │
-
                             ▼
-
                     ┌────────────────┐
-
                     │   CloudFront   │
-
                     │ CDN + HTTPS    │
-
                     └───────┬────────┘
-
                             │
-
                             ▼
-
                     ┌────────────────┐
-
                     │      S3        │
-
                     │ React Frontend │
-
                     └────────────────┘
 
-
-
                     Browser API Requests
-
                             │
-
                             ▼
-
                     ┌────────────────┐
-
                     │  API Gateway   │
-
                     │    HTTP API    │
-
                     └───────┬────────┘
-
                             │
-
               ┌─────────────┼─────────────┐
-
               │             │             │
-
               ▼             ▼             ▼
-
         ┌──────────┐  ┌──────────┐  ┌──────────┐
-
         │  Create  │  │ Redirect │  │  Manage  │
-
         │  Lambda  │  │  Lambda  │  │  Lambda  │
-
         └────┬─────┘  └────┬─────┘  └────┬─────┘
-
              │             │             │
-
              └─────────────┼─────────────┘
-
                            │
-
                            ▼
-
                   ┌─────────────────┐
-
                   │    DynamoDB     │
-
                   │ URL + Analytics │
-
                   └────────┬────────┘
-
                            │
-
                            │ URL security check
-
                            ▼
-
                   ┌─────────────────┐
-
                   │ Google Safe     │
-
                   │ Browsing API    │
-
                   └─────────────────┘
 
-
-
                        Monitoring
-
                            │
-
                            ▼
-
                      CloudWatch
-
-
-
-
-
 # 💻 Tech Stack
 
-Frontend
+#Frontend
 
 •React
-
-
 
 •TypeScript
 
@@ -310,7 +252,7 @@ Frontend
 
 •html
 
-Backend
+#Backend
 
 •AWS Lambda
 
@@ -320,7 +262,7 @@ Backend
 
 •AWS SDK for JavaScript
 
-Cloud
+#Cloud
 
 •Amazon API Gateway
 
@@ -334,7 +276,7 @@ Cloud
 
 •AWS CloudWatch
 
-Security
+#Security
 
 •Google Safe Browsing API
 
@@ -342,7 +284,7 @@ Security
 
 •HTTPS through planned CloudFront deployment
 
-Development
+#Development
 
 •Git
 
@@ -454,10 +396,13 @@ AWS Console access
 
 Clone the repository
 
+```bash
 git clone <YOUR-GITHUB-REPOSITORY-URL>
+```
 
+```bash
 cd serverless-url-shortener
-
+```
 
 
 🎨 Frontend Setup
