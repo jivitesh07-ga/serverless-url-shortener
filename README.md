@@ -234,7 +234,6 @@ Reduced-motion support
 # 📁 Project Structure
 
 serverless-url-shortener/
-│
 ├── frontend/
 │   ├── src/
 │   ├── public/
@@ -242,32 +241,24 @@ serverless-url-shortener/
 │   ├── package.json
 │   ├── tsconfig.json
 │   └── vite.config.ts
-│
 ├── backend/
 │   ├── src/
 │   │   ├── createUrl/
 │   │   │   └── handler.ts
-│   │   │
 │   │   ├── redirectUrl/
 │   │   │   └── handler.ts
-│   │   │
 │   │   ├── manageUrls/
 │   │   │   └── handler.ts
-│   │   │
 │   │   └── shared/
 │   │       └── dynamodb.ts
-│   │
 │   ├── package.json
 │   └── tsconfig.json
-│
 ├── infrastructure/
-│
 ├── docs/
 │   ├── architecture.md
 │   ├── database.md
 │   ├── api.md
 │   └── security.md
-│
 ├── .env.example
 ├── .gitignore
 └── README.md
