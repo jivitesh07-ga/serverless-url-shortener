@@ -410,16 +410,13 @@ Do not commit real secrets to GitHub.
 # 📄 Documentation
 
 Detailed project documentation is available in:
-
+<pre>
 docs/
-
 ├── architecture.md
-
 ├── database.md
-
 ├── api.md
-
 └── security.md
+</pre>
 
 The repository also contains the complete architecture documentation covering the AWS components, request flows, database model, security model, and deployment status.
 
